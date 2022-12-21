@@ -21,7 +21,7 @@ RUN git clone https://github.com/fedora-infra/mdapi.git /code/
 RUN git checkout develop
 
 # Copying the build script after cloning is complete as Git does not allow cloning into non-empty directories
-COPY /home/alcphost/buildcfg/mdapi/runbuild.sh /code/
+COPY runbuild.sh /code/
 
 # Instantiating the container from the image without any executable would default to running the build script
 ENTRYPOINT ["sh", "/code/runbuild.sh"]
